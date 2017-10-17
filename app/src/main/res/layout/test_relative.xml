@@ -16,7 +16,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/ed_weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
@@ -33,12 +33,12 @@
         android:layout_marginTop="20dp"
         android:text="Height"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_below="@+id/editText3"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_alignStart="@+id/editText3" />
+        android:layout_below="@+id/ed_weight"
+        android:layout_alignLeft="@+id/ed_weight"
+        android:layout_alignStart="@+id/ed_weight" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/ed_height"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -54,9 +54,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
         android:text="CALCULATE BMI"
-        android:layout_below="@+id/editText4"
-        android:layout_alignLeft="@+id/editText4"
-        android:layout_alignStart="@+id/editText4" />
+        android:layout_below="@+id/ed_height"
+        android:layout_alignLeft="@+id/ed_height"
+        android:layout_alignStart="@+id/ed_height" />
 
     <Button
         android:id="@+id/button4"
