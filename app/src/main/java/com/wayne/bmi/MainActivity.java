@@ -11,19 +11,29 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
    // String s = new String("abc");
-    View.OnClickListener listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
+   // View.OnClickListener listener = new View.OnClickListener() {
+   //    @Override
+    //   public void onClick(View view) {
 
-        }
-    };
+    //   }
+  // };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
       //  getResources().getString(R.string.app_name);
         Button bHelp = (Button)findViewById(R.id.b_help);
-        bHelp.setOnClickListener();
+        bHelp.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("X")
+                        .setMessage("BMI原來是.............")
+                        .setPositiveButton("OK",null)
+                        .show();
+            }
+        });
+        
     }
     public void bmi(View view){
         System.out.println("123");
