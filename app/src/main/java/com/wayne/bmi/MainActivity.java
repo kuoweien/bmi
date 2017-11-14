@@ -46,13 +46,19 @@ public class MainActivity extends AppCompatActivity {
         /*Log.d("MainActivity","Your bmi is:"+bmi);
         Toast.makeText(this,"Your bmi is" + bmi, Toast.LENGTH_LONG).show();*/
 
-            new AlertDialog.Builder(this)
+         new AlertDialog.Builder(this)
                     .setMessage(getString(R.string.your_bmi_is) + bmi)
                     .setTitle(R.string.my_title)
                     .setPositiveButton(R.string.OK, null)
                     .show();
-        if(bmi<=20){
+       /* if(bmi<=20){
             Toast.makeText(this,"請多吃點",Toast.LENGTH_LONG).show();
+        }*/
+        if(R.id.ed_height>3){
+            new AlertDialog.Builder(this)
+                    .setMessage("身高單位應為公尺")
+                    .setPositiveButton("OK",null)
+                    .show();
         }
     }
 }
