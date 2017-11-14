@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
       //  getResources().getString(R.string.app_name);
-        Button bHelp = (Button)findViewById(R.id.b_help);
+      /*  Button bHelp = (Button)findViewById(R.id.b_help);
         bHelp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -33,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
                         .show();
             }
         });
-        
+        */
     }
     public void bmi(View view){
-        System.out.println("123");
+    //    System.out.println("123");
         Log.d("MainActivity","testing bmi method ");
         EditText edweight = (EditText) findViewById(R.id.ed_weight);
         EditText edheight = (EditText) findViewById(R.id.ed_height);
@@ -45,10 +45,14 @@ public class MainActivity extends AppCompatActivity {
         float bmi = weight / (height*height);
         /*Log.d("MainActivity","Your bmi is:"+bmi);
         Toast.makeText(this,"Your bmi is" + bmi, Toast.LENGTH_LONG).show();*/
-        new AlertDialog.Builder(this)
-                .setMessage(getString(R.string.your_bmi_is)+bmi)
-                .setTitle(R.string.my_title)
-                .setPositiveButton(R.string.OK,null)
-                .show();
+
+            new AlertDialog.Builder(this)
+                    .setMessage(getString(R.string.your_bmi_is) + bmi)
+                    .setTitle(R.string.my_title)
+                    .setPositiveButton(R.string.OK, null)
+                    .show();
+        if(bmi<=20){
+            Toast.makeText(this,"請多吃點",Toast.LENGTH_LONG).show();
+        }
     }
 }
